@@ -1,0 +1,35 @@
+
+Ram
+           0            1          2            3           4
+    0 ["00000000", "00000000", "00000000", "00000000", "00000000"], 
+    1 ["00000000", "00000000", "00000000", "00000000", "00000000"],
+    2 ["00000000", "00000000", "00000000", "00000000", "00000000"], 
+    3 ["00000000", "00000000", "00000000", "00000000", "00000000"], 
+    4 ["00000000", "00000000", "00000000", "00000000", "00000000"],
+    5 ["00000000", "00000000", "00000000", "00000000", "00000000"],
+    6 ["00000000", "00000000", "00000000", "00000000", "00000000"],
+    7 ["00000000", "00000000", "00000000", "00000000", "00000000"]
+
+ LDRA<Val>        //Load RegA with Val.
+ LDRB<Val>        //Load RegB with Val.
+ LDRC<Val>        //Load RegC with Val.
+ LDRD<Val>        //Load RegD with Val.
+ RDRA             //Returns the value of RegA.
+ RDRB             //Returns the value of RegB.
+ RDRC             //Returns the value of RegC.
+ RDRD             //Returns the value of RegD.
+ ADD<Num>         //ADDs RegA with Num - RegA = RegA + Num.
+ SUB<Num>         //SUBs RegA with Num - RegA = RegA - Num.
+ MUT<Num>         //MUTs RegA with Num - RegA = RegA * Num.
+ DIV<Num>         //DIVs RegA by Num - RegA = RegA / Num.
+ LDP              //Loads RegB code to Port.
+ RDP              //Loads port code to RegB.
+ STCL             //End the clock - Ends Run.
+ RMLD<Loc, Val>   //Write to RAM @ XxY-X and Y location (Ex: 2x5).
+ RMRD<Loc>        //Read RAM @ XxY.
+ PRTF<Thing>      //Print Thing.
+
+RegA - Math Register
+RegB - Input/Output Register
+RegC - Extra Register
+RegD - Other Register
