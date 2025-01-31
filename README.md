@@ -6,4 +6,4 @@ The heart of this CPU’s performance lies in its 4 8-bit registers—RegA, RegB
 
 In terms of memory, the CPU is equipped with a 45-byte RAM matrix, structured as a 5-by-40 grid. This compact memory setup is sufficient for the basic needs of the processor, providing enough space to store variables, results, and data needed for simple programs. The RAM is accessed using a specific set of instructions, such as RMLD (Write to RAM) and RMRD (Read from RAM), enabling seamless interaction with memory locations. Despite the small size, the combination of the 4 registers and the 45-byte RAM allows for effective execution of assembly programs, offering an ideal environment for small-scale embedded systems or educational purposes. With its minimalistic approach, this CPU is an excellent choice for learning about processor architecture and programming at the hardware level.
 
-if anyone likes it you can commit about more dezines for the x20
+if anyone likes it you can commit about more dezines for the x20 or for a new vershon for the x18 (I aso do debuging so aso add bugs if you want).
