@@ -59,7 +59,7 @@ def MUT(Num):
     global RegA
     RegA = RegA * Num
 
-def DEV(Num):
+def DIV(Num):
     global RegA
     RegA = RegA / Num
 
@@ -97,8 +97,11 @@ def main():
     LDRA(0)  
     LDRB(0)  
     LDRC(0)  
-    LDRD(0)  
-    STCL()  # Stop the program
+    LDRD(0)
+    
+    
+    
+    STCL()
 
 if __name__ == "__main__":
     main()
