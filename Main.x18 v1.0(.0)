@@ -1,0 +1,106 @@
+# RAM Initialization
+Ram = [
+    ["00000000", "00000000", "00000000", "00000000", "00000000"], 
+    ["00000000", "00000000", "00000000", "00000000", "00000000"],
+    ["00000000", "00000000", "00000000", "00000000", "00000000"], 
+    ["00000000", "00000000", "00000000", "00000000", "00000000"], 
+    ["00000000", "00000000", "00000000", "00000000", "00000000"],
+    ["00000000", "00000000", "00000000", "00000000", "00000000"],
+    ["00000000", "00000000", "00000000", "00000000", "00000000"],
+    ["00000000", "00000000", "00000000", "00000000", "00000000"]
+]
+
+# Global Registers
+RegA = 0
+RegB = 0
+RegC = 0
+RegD = 0
+
+# Load Values into Registers
+def LDRA(Val):
+    global RegA
+    RegA = Val
+
+def LDRB(Val):
+    global RegB
+    RegB = Val
+
+def LDRC(Val):
+    global RegC
+    RegC = Val
+
+def LDRD(Val):
+    global RegD
+    RegD = Val
+
+# Read Values from Registers
+def RDRA():
+    return RegA
+
+def RDRB():
+    return RegB
+
+def RDRC():
+    return RegC
+
+def RDRD():
+    return RegD
+
+# Arithmetic Operations
+def ADD(Num):
+    global RegA
+    RegA = RegA + Num
+
+def SUB(Num):
+    global RegA
+    RegA = RegA - Num
+
+def MUT(Num):
+    global RegA
+    RegA = RegA * Num
+
+def DEV(Num):
+    global RegA
+    RegA = RegA / Num
+
+# Load and Store Register to Print (Example)
+def LDP():
+    global RegB
+    PRT = RegB  
+
+def RDP():
+    global RegB
+    PRT = RegB  # Storing the value of RegB back to PRT
+
+# Stop and Exit Function
+def STCL():
+    exit()
+
+# Read/Write from RAM
+def RMLD(Loc, Val):
+    # Extract Row and Column from Loc string
+    row, col = Loc.split('x')
+    row, col = int(row), int(col)
+    Ram[row][col] = Val
+
+def RMRD(Loc):
+    # Extract Row and Column from Loc string
+    row, col = Loc.split('x')
+    row, col = int(row), int(col)
+    return Ram[row][col]
+
+def PRTF(Thing):
+    print(Thing)
+
+# Main Simulation
+def main():
+    LDRA(0)  
+    LDRB(0)  
+    LDRC(0)  
+    LDRD(0)  
+    STCL()  # Stop the program
+
+if __name__ == "__main__":
+    main()
+
+main()
